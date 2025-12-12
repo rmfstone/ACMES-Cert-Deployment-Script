@@ -1,11 +1,19 @@
 #!/usr/bin/env bash
 # Made by a Stone
 
-# Sources
-
 main() {
+  check_root
   check_acme
   set_env_variables
+}
+
+check_root() {
+  if [ "$EUID" -ne 0 ]; then
+    echo "Please run as root"
+    exit 1
+  else
+    echo "Root check successfully!"
+  fi
 }
 
 check_acme() {
