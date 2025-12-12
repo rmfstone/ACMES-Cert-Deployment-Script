@@ -27,3 +27,4 @@ set_env_variables() {
   #export ISSUER_PREFIX="$prefix"
   #export ISSUER_SECRET="$secret"
 }
+main "$@"
