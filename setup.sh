@@ -2,10 +2,8 @@
 # Made by a Stone
 
 # Sources
-source ./install.sh
 
 main() {
-  check_root
   check_acme
   set_env_variables
 }
